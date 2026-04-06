@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sortScreen</class>
+ <widget class="QWidget" name="sortScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1021</width>
+    <height>201</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kryterium sortowania</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="kryteriumBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>161</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>id</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>tytuł</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ocena</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>rok produkcji</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>czas trwania</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>reżyser</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>gatunek</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="sortBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>70</y>
+     <width>91</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>rosnąco</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>malejąco</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sposób sortowania</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sortButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>40</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sortuj</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>40</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Resetuj</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

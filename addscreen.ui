@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addScreen</class>
+ <widget class="QWidget" name="addScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1021</width>
+    <height>261</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="addMovieButton">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>70</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dodaj film</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Tytuł</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ocena</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="titleEdit">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>191</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rok produkcji</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Czas trwania</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reżyser</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="directorEdit">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>170</y>
+     <width>191</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>10</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gatunek:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="genreBox">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>10</y>
+     <width>161</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Action</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Comedy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Drama</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sci-Fi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Horror</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Thriller</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fantasy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Documentary</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Animation</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Crime</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Romance</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mystery</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QDoubleSpinBox" name="scoreBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>50</y>
+     <width>191</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <double>10.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="yearBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>90</y>
+     <width>191</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>2026</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="lengthBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>130</y>
+     <width>191</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errorMsg">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>220</y>
+     <width>631</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
