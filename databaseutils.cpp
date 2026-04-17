@@ -15,10 +15,11 @@ int DatabaseUtils::getOrCreateId(const QString &tableName, const QString &name) 
     return -1;
 }
 QPair<double, double> DatabaseUtils::getGlobalStats() {
-    QSqlQuery query("SELECT AVG(score), AVG(duration) FROM movies", QSqlDatabase::database("myConnection"));
-    if (query.next())
+    QSqlQuery query(QSqlDatabase::database("myConnection"));
+    query.prepare("SELECT AVG(score), AVG(duration) FROM movies");
+    if (query.exec() && query.next())
         return {query.value(0).toDouble(), query.value(1).toDouble()};
-    return {0.0, 0.0};
+    return {1, 1};
 }
 
 MovieStats DatabaseUtils::getGenreStats(const QString &genreName) {
@@ -45,4 +46,25 @@ void DatabaseUtils::cleanupDirectors() {
     QSqlQuery query(QSqlDatabase::database("myConnection"));
     query.exec("DELETE FROM directors WHERE id NOT IN (SELECT DISTINCT director_id FROM movies)");
 
+}
+double  DatabaseUtils::getMinScore(){
+    QSqlQuery query(QSqlDatabase::database("myConnection"));
+    query.prepare("SELECT MIN(score) FROM movies ");
+    if(query.exec() && query.next()) return query.value(0).toDouble();
+    return -1;
+}
+double  DatabaseUtils::getMaxScore(){
+    QSqlQuery query(QSqlDatabase::database("myConnection"));
+    query.prepare("SELECT MAX(score) FROM movies");
+    if(query.exec() && query.next()) return query.value(0).toDouble();
+    return -1;
+}
+double  DatabaseUtils::getMedianScore(){
+    QSqlQuery query(QSqlDatabase::database("myConnection"));
+    query.prepare("SELECT percentile_cont(0.5) WITHIN GROUP (ORDER BY score) FROM movies");
+
+    if(query.exec() && query.next()) {
+        return query.value(0).toDouble();
+    }
+    return -1;
 }

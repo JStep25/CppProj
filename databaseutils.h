@@ -15,6 +15,9 @@ public:
     static MovieStats getGenreStats(const QString &genreName);
     static MovieStats getDirectorStats(const QString &directorName);
     static void cleanupDirectors();
+    static double getMinScore();
+    static double getMaxScore();
+    static double getMedianScore();
 };
 
 #endif
