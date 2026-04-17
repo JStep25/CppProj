@@ -15,13 +15,21 @@ addScreen::~addScreen()
 
 void addScreen::on_addMovieButton_clicked()
 {
-    QString title, ocena, rok, czasTrwania, director, gatunek;
+    QString title, ocenaStr, rok, czasTrwania, director, gatunek;
+    bool ok;
     title = ui->titleEdit->text().trimmed();
-    ocena = ui->scoreBox->text().trimmed();
+    ocenaStr = ui->scoreBox->text().trimmed();
     rok =  ui->yearBox->text().trimmed();
     czasTrwania =  ui->lengthBox->text().trimmed();
     director =  ui->directorEdit->text().trimmed();
     gatunek = ui->genreBox->currentText().trimmed();
+    double ocena = ocenaStr.replace(",", ".").toDouble(&ok);
+
+    if (!ok) {
+        ui->errorMsg->setText("Nieprawidlowa ocena");
+        ui->errorMsg->setStyleSheet("font-size: 18px; color: red; font-weight: bold;");
+        return;
+    }
 
     if (title.isEmpty() || rok == "0" || czasTrwania == "0" || director.isEmpty()) {
         qDebug() << "Wypelnij wszystkie pola";
@@ -41,8 +49,8 @@ void addScreen::on_addMovieButton_clicked()
     query.prepare("INSERT INTO movies (title, score, production_year, duration, director_id, genre_id) VALUES (?, ?, ?, ? , ? , ?)");
     query.addBindValue(title);
     query.addBindValue(ocena);
-    query.addBindValue(rok);
-    query.addBindValue(czasTrwania);
+    query.addBindValue(rok.toInt());
+    query.addBindValue(czasTrwania.toInt());
     query.addBindValue(dirId);
     query.addBindValue(genId);
 
@@ -56,6 +64,9 @@ void addScreen::on_addMovieButton_clicked()
         ui->yearBox->clear();
         ui->lengthBox->clear();
         ui->directorEdit->clear();
+        ui->scoreBox->setValue(0.0);
+        ui->yearBox->setValue(0);
+        ui->lengthBox->setValue(0);
         emit movieAdded();
     }
 }

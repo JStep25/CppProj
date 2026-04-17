@@ -12,7 +12,6 @@ public:
     dataBase();
     bool connect();
     void createTable();
-
     bool initDbFromSqlFile(const QString &filePath);
 private:
     QSqlDatabase db;

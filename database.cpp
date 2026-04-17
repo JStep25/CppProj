@@ -10,7 +10,7 @@ bool dataBase::connect() {
     db.setDatabaseName("postgres");
 
     if (!db.open()) {
-        qDebug() << "Nie mozna polaczyc sie z serwerem PostgreSQL";
+        qDebug() << "Nie mozna polaczyc sie z bazą";
         return false;
     }
 
@@ -46,10 +46,10 @@ bool dataBase::initDbFromSqlFile(const QString &filePath) {
     }
 
     QTextStream in(&file);
-    QString sqlScript = in.readAll();
+    QString sqlFile = in.readAll();
     file.close();
 
-    QStringList queries = sqlScript.split(';', Qt::SkipEmptyParts);
+    QStringList queries = sqlFile.split(';', Qt::SkipEmptyParts);
     QSqlQuery query(db);
 
     for (const QString &queryString : std::as_const(queries)) {
@@ -62,6 +62,6 @@ bool dataBase::initDbFromSqlFile(const QString &filePath) {
         }
     }
 
-    qDebug() << "Schemat z pliku .sql zostal zaladowany pomyslnie.";
+    qDebug() << "Schemat z pliku .sql zostal zaladowany.";
     return true;
 }

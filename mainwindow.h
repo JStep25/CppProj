@@ -53,7 +53,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QSqlTableModel *model;
+    QSqlRelationalTableModel *model;
     addScreen *m_addScreen;
     deleteScreen *m_deleteScreen;
     editScreen *m_editScreen;

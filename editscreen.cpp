@@ -15,14 +15,15 @@ editScreen::~editScreen()
 
 void editScreen::on_editButton_clicked()
 {
-    QString title, ocena, rok, czasTrwania, director, gatunek, idStr;
+    QString title, ocenaStr, rok, czasTrwania, director, gatunek, idStr;
     title = ui->titleEdit->text().trimmed();
-    ocena = ui->scoreBox->text().trimmed();
+    ocenaStr = ui->scoreBox->text().trimmed();
     rok =  ui->yearBox->text().trimmed();
     czasTrwania =  ui->lengthBox->text().trimmed();
     director =  ui->directorEdit->text().trimmed();
     gatunek = ui->genreBox->currentText().trimmed();
     idStr = ui->idBox->text().trimmed();
+    double ocena = ocenaStr.replace(",", ".").toDouble();
     if (title.isEmpty() || rok == "0" || czasTrwania == "0" || director.isEmpty()) {
         qDebug() << "Wypelnij wszystkie pola";
         ui->errorMsg->setText("Wypelnij wszystkie pola");
@@ -58,8 +59,8 @@ void editScreen::on_editButton_clicked()
     query.prepare("UPDATE movies SET title = ?, score = ?, production_year = ?, duration = ?, director_id = ?, genre_id = ? WHERE id = ?");
     query.addBindValue(title);
     query.addBindValue(ocena);
-    query.addBindValue(rok);
-    query.addBindValue(czasTrwania);
+    query.addBindValue(rok.toInt());
+    query.addBindValue(czasTrwania.toInt());
     query.addBindValue(dirId);
     query.addBindValue(genId);
     query.addBindValue(id);

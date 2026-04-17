@@ -7,17 +7,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QSqlDatabase db = QSqlDatabase::database("myConnection");
-    QSqlRelationalTableModel *relModel = new QSqlRelationalTableModel(this, db);
-    model = relModel;
 
+    model = new QSqlRelationalTableModel(this, db);
     model->setTable("movies");
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);
-    relModel->setRelation(5, QSqlRelation("directors", "id", "name"));
-
-    relModel->setRelation(6, QSqlRelation("genres", "id", "name"));
+    model->setRelation(5, QSqlRelation("directors", "id", "name"));
+    model->setRelation(6, QSqlRelation("genres", "id", "name"));
     model->setSort(0, Qt::AscendingOrder);
-    model->select();
-    model->select();
+
+
+    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
 
 
 
@@ -58,7 +58,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_sortScreen, &sortScreen::sortRequested, this, &MainWindow::applySort);
     connect(m_filterScreen, &filterScreen::filterRequested, this, &MainWindow::applyFilters);
 
-
+    model->select();
 }
 
 MainWindow::~MainWindow()
