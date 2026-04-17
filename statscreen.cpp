@@ -30,11 +30,15 @@ void statScreen::on_showButton_clicked()
     MovieStats gStats = DatabaseUtils::getGenreStats(selectedGenre);
     ui->avrScoreGenre->setText(QString::number(gStats.average, 'f', 2));
     ui->genreMovieNumber->setText(QString::number(gStats.count));
+    ui->minGenre->setText(QString::number(gStats.min));
+    ui->maxGenre->setText(QString::number(gStats.max));
 
     QString selectedDirector = ui->directorBox->currentText();
     MovieStats dStats = DatabaseUtils::getDirectorStats(selectedDirector);
     ui->avrScoreDirect->setText(QString::number(dStats.average, 'f', 2));
     ui->directMovieNumber->setText(QString::number(dStats.count));
+    ui->minDirect->setText(QString::number(dStats.min));
+    ui->maxDirect->setText(QString::number(dStats.max));
 
 }
 void statScreen::refreshComboBoxes() {

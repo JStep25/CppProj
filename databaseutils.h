@@ -7,6 +7,8 @@
 struct MovieStats {
     double average;
     int count;
+    double min;
+    double max;
 };
 class DatabaseUtils {
 public:

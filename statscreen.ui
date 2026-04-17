@@ -7,42 +7,29 @@
     <x>0</x>
     <y>0</y>
     <width>1021</width>
-    <height>227</height>
+    <height>272</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>40</y>
-     <width>221</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Średnia ocen wszystkich filmów:</string>
-   </property>
-  </widget>
   <widget class="QComboBox" name="directorBox">
    <property name="geometry">
     <rect>
-     <x>810</x>
+     <x>770</x>
      <y>50</y>
-     <width>161</width>
-     <height>28</height>
+     <width>181</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>307</x>
      <y>50</y>
-     <width>131</width>
-     <height>20</height>
+     <width>91</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -52,74 +39,22 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>700</x>
+     <x>666</x>
      <y>50</y>
-     <width>121</width>
-     <height>20</height>
+     <width>90</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>Wybierz reżysera:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>90</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Średnia ocena gatunku:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>690</x>
-     <y>90</y>
-     <width>171</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Średnia ocena fimów reżysera :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>130</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Liczba filmów gatunku:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>690</x>
-     <y>130</y>
-     <width>171</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Liczba filmów reżysera:</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="showButton">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>180</y>
-     <width>111</width>
+     <x>400</x>
+     <y>220</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -127,104 +62,13 @@
     <string>Odśwież</string>
    </property>
   </widget>
-  <widget class="QLabel" name="avrScore">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>40</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="avrScoreGenre">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>90</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="genreMovieNumber">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>130</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="avrScoreDirect">
-   <property name="geometry">
-    <rect>
-     <x>880</x>
-     <y>90</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="directMovieNumber">
-   <property name="geometry">
-    <rect>
-     <x>880</x>
-     <y>130</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_13">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>70</y>
-     <width>181</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Średni czas trwania filmu: </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="avrLength">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>70</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QComboBox" name="genreBox">
    <property name="geometry">
     <rect>
      <x>410</x>
      <y>50</y>
-     <width>161</width>
-     <height>28</height>
+     <width>101</width>
+     <height>24</height>
     </rect>
    </property>
    <item>
@@ -283,64 +127,12 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="max">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>100</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_14">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>100</y>
-     <width>181</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Najwyższa ocena filmu:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="min">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>130</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_15">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>130</y>
-     <width>181</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Najniższa ocena filmu:</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>10</y>
-     <width>221</width>
+     <x>10</x>
+     <y>20</y>
+     <width>151</width>
      <height>21</height>
     </rect>
    </property>
@@ -359,8 +151,8 @@
     <rect>
      <x>310</x>
      <y>10</y>
-     <width>221</width>
-     <height>20</height>
+     <width>147</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -376,10 +168,10 @@
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>10</y>
-     <width>221</width>
-     <height>20</height>
+     <x>660</x>
+     <y>11</y>
+     <width>146</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -392,31 +184,223 @@
     <string>Statystyki reżysera:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_16">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>160</y>
-     <width>181</width>
-     <height>20</height>
+     <y>80</y>
+     <width>261</width>
+     <height>106</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Mediana ocen:</string>
-   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Średnia ocen wszystkich filmów:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="avrScore">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Średni czas trwania filmu: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="avrLength">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>Najwyższa ocena filmu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="max">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Najniższa ocena filmu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="min">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>Mediana ocen:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="median">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QLabel" name="median">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>160</y>
-     <width>71</width>
-     <height>20</height>
+     <x>310</x>
+     <y>80</y>
+     <width>271</width>
+     <height>111</height>
     </rect>
    </property>
-   <property name="text">
-    <string/>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>Najwyższa ocena filmu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string>Najniższa ocena filmu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="avrScoreGenre">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="maxGenre">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Liczba filmów gatunku:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="minGenre">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Średnia ocena gatunku:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="genreMovieNumber">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>80</y>
+     <width>311</width>
+     <height>121</height>
+    </rect>
    </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Średnia ocena fimów reżysera :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="avrScoreDirect">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Liczba filmów reżysera:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="directMovieNumber">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_20">
+      <property name="text">
+       <string>Najwyższa ocena filmu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="maxDirect">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="text">
+       <string>Najniższa ocena filmu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="minDirect">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

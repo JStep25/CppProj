@@ -24,23 +24,23 @@ QPair<double, double> DatabaseUtils::getGlobalStats() {
 
 MovieStats DatabaseUtils::getGenreStats(const QString &genreName) {
     QSqlQuery query(QSqlDatabase::database("myConnection"));
-    query.prepare("SELECT AVG(m.score), COUNT(m.id) FROM movies m "
+    query.prepare("SELECT AVG(m.score), COUNT(m.id), MAX(m.score), MIN(m.score) FROM movies m "
                   "JOIN genres g ON m.genre_id = g.id WHERE g.name = ?");
     query.addBindValue(genreName);
     if (query.exec() && query.next())
-        return {query.value(0).toDouble(), query.value(1).toInt()};
-    return {0.0, 0};
+        return {query.value(0).toDouble(), query.value(1).toInt(), query.value(2).toDouble(),query.value(3).toDouble()};
+    return {0.0, 0, 0.0, 0.0};
 }
 
 
 MovieStats DatabaseUtils::getDirectorStats(const QString &directorName) {
     QSqlQuery query(QSqlDatabase::database("myConnection"));
-    query.prepare("SELECT AVG(m.score), COUNT(m.id) FROM movies m "
+    query.prepare("SELECT AVG(m.score), COUNT(m.id), MAX(m.score), MIN(m.score) FROM movies m "
                   "JOIN directors d ON m.director_id = d.id WHERE d.name = ?");
     query.addBindValue(directorName);
     if (query.exec() && query.next())
-        return {query.value(0).toDouble(), query.value(1).toInt()};
-    return {0.0, 0};
+        return {query.value(0).toDouble(), query.value(1).toInt(), query.value(2).toDouble(),query.value(3).toDouble()};
+    return {0.0, 0, 0.0, 0.0};
 }
 void DatabaseUtils::cleanupDirectors() {
     QSqlQuery query(QSqlDatabase::database("myConnection"));
