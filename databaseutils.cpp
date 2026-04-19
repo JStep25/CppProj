@@ -19,7 +19,7 @@ QPair<double, double> DatabaseUtils::getGlobalStats() {
     query.prepare("SELECT AVG(score), AVG(duration) FROM movies");
     if (query.exec() && query.next())
         return {query.value(0).toDouble(), query.value(1).toDouble()};
-    return {1, 1};
+    return {-1,-1};
 }
 
 MovieStats DatabaseUtils::getGenreStats(const QString &genreName) {
@@ -29,7 +29,7 @@ MovieStats DatabaseUtils::getGenreStats(const QString &genreName) {
     query.addBindValue(genreName);
     if (query.exec() && query.next())
         return {query.value(0).toDouble(), query.value(1).toInt(), query.value(2).toDouble(),query.value(3).toDouble()};
-    return {0.0, 0, 0.0, 0.0};
+    return {-1.0, -1, -1.0, -1.0};
 }
 
 
@@ -40,7 +40,7 @@ MovieStats DatabaseUtils::getDirectorStats(const QString &directorName) {
     query.addBindValue(directorName);
     if (query.exec() && query.next())
         return {query.value(0).toDouble(), query.value(1).toInt(), query.value(2).toDouble(),query.value(3).toDouble()};
-    return {0.0, 0, 0.0, 0.0};
+    return {-1.0, -1, -1.0, -1.0};
 }
 void DatabaseUtils::cleanupDirectors() {
     QSqlQuery query(QSqlDatabase::database("myConnection"));
